@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOSP & Kernel Lab | shiftcrypto69</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --aosp-green: #3DDC84; --kernel-blue: #007bff; --terminal-black: #0d0d0d; }
+        body { background-color: var(--terminal-black); color: #00ff41; font-family: 'Courier New', Courier, monospace; }
+        .navbar { border-bottom: 2px solid var(--aosp-green); background: #000; }
+        .terminal-window { background: #1a1a1a; border: 1px solid #333; border-radius: 6px; padding: 20px; box-shadow: 0 10px 30px rgba(0,255,65,0.1); }
+        .cmd-line { color: #fff; }
+        .cmd-line::before { content: "shiftcrypto69@AOSP-Lab:~$ "; color: var(--aosp-green); }
+        .feature-card { background: #111; border: 1px solid var(--kernel-blue); transition: 0.3s; height: 100%; }
+        .feature-card:hover { box-shadow: 0 0 15px var(--kernel-blue); }
+        .step-number { background: var(--aosp-green); color: #000; font-weight: bold; width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-dark p-3">
+    <div class="container">
+        <span class="navbar-brand fw-bold"><i class="fab fa-android me-2"></i> AOSP-KERNEL-LAB</span>
+        <span class="badge bg-danger text-white">EXPERIMENTAL ZONE</span>
+    </div>
+</nav>
+
+<main class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold text-white">OS Modification & <span class="text-info">Kernel Tuning</span></h1>
+        <p class="text-secondary">Pusat dokumentasi membina Android Open Source Project & Kustomisasi Kernel Linux.</p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card feature-card p-4">
+                <h4 class="text-info"><i class="fas fa-server me-2"></i> Build Environment</h4>
+                <p class="small text-secondary">Konfigurasi WSL2 Ubuntu untuk kompilasi OS berskala besar.</p>
+                <div class="terminal-window small">
+                    <div class="cmd-line">sudo apt install git-core gnupg flex bison build-essential zip curl zlib1g-dev libncurses5-dev libssl-dev</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card feature-card p-4">
+                <h4 class="text-info"><i class="fas fa-boot me-2"></i> Boot sequence</h4>
+                <p class="small text-secondary">Memodifikasi <code>init.rc</code> untuk kawalan servis semasa startup.</p>
+                <ul class="list-unstyled small">
+                    <li>- Edit Boot Animation</li>
+                    <li>- Mount System Filesystems</li>
+                    <li>- Kernel Cmdline Tuning</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-5 terminal-window">
+        <h5 class="text-white"><i class="fas fa-code-branch me-2"></i> Next Phase: Android 14/15 Build</h5>
+        <p class="text-secondary">Dokumentasi cara menggunakan <code>repo sync</code> untuk memuat turun beratus GB kod sumber AOSP secara efisien.</p>
+    </div>
+</main>
+
+<footer class="text-center py-4 border-top border-secondary mt-5">
+    <p class="small text-secondary">AOSP-Kernel-Lab | Part of Mastery Core Central</p>
+</footer>
+
+</body>
+</html>
